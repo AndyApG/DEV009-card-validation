@@ -6,9 +6,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav>
+        
+        Pago con tarjeta
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Información de la tarjeta: </legend>
+
+            <label>Tipo de tarjeta: </label>
+
+            <input type="radio"><label>Crédito</label>
+            <input type="radio"><label>Débito</label><br>
+
+            <label>Titular: </label>
+            <input id="name" type="text"><br>
+
+            <label>Numero de tarjeta</label>
+            <input id="number" type="number"><br>
+
+            <label>Válida hasta:</label>
+            <input id="valid" type="number"> <input type="number">
+            <label>CVV</label>
+            <input id="cvv" type="number">
+
+          </fieldset>
+          
+          <button>Agregar</button>
+
+         
+        </form>
+
+        
+
+      </section>
+      
+
+
+    </main>
+    <footer>Elaborado por: Andrea Aparicio Guerrero</footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
