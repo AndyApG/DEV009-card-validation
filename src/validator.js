@@ -32,14 +32,8 @@ const validator = {
     }else{
       const hashtag ='#'.repeat(creditCardNumber.length-4);
       const lastFourNumbers= creditCardNumber.slice(-4);
-      const mask = hashtag+lastFourNumbers;
-      return mask;
-
+      return hashtag+lastFourNumbers;
     }
     
   }
-
-};
-
-
-export default validator;
+};export default validator;

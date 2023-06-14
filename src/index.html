@@ -2,50 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Billetera electronica</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        
-        Pago con tarjeta
-      </nav>
+      <h1>Guarda tus tarjetas en un solo lugar</h1>
     </header>
 
     <main>
-      <section>
-        <form>
-          <fieldset>
-            <legend>Información de la tarjeta: </legend>
 
-            <label>Tipo de tarjeta: </label>
+      <div class="lista">
+        <legend>Lista de tarjetas</legend>
 
-            <input type="radio"><label>Crédito</label>
-            <input type="radio"><label>Débito</label><br>
+        <ul>
 
-            <label>Titular: </label>
-            <input id="name" type="text"><br>
-
-            <label>Numero de tarjeta</label>
-            <input id="number" type="number"><br>
-
-            <label>Válida hasta:</label>
-            <input id="valid" type="number"> <input type="number">
-            <label>CVV</label>
-            <input id="cvv" type="number">
-
-          </fieldset>
-          
-          <button>Agregar</button>
-
-         
-        </form>
-
+        </ul>
         
 
-      </section>
+      </div>
       
+
+      <div class="tarjeta">
+
+        
+        <output type='text' class="tipo" id="tipo1">xxxx</output><br>
+        
+        <output class="name" id="name1">xxxx xxxx</output><br>
+        <a><img src="imagenes/chip.png" class="chip"></a>
+        
+        <output class="number" id="number1">0000000000000000</output><br>
+        
+        <output class="mes" id="mes">xxxx xx</output>
+        
+        <output class='cvv' id="cvv1">xxxx</output>
+        
+
+
+      </div>
+
+      <form>
+          
+        <legend>Información de la tarjeta: </legend>
+        <hr>
+
+        <label>Tipo de tarjeta: </label>
+
+        <input type="radio" name="tipo" id="credito" value="Crédito"><label>Crédito</label>
+        <input type="radio" name="tipo" id="debito" value="Débito"><label>Débito</label><br>
+
+        <a><img src="imagenes/persona.png"></a>
+        <input id="name" type="text"><br>
+
+        <a><img src="imagenes/card.png"></a>
+      
+        <input id="number" type="text" ondrop="return false;" onpaste="return false;"
+        onkeypress="return event.charCode>=48 && event.charCode<=57;"
+        minlength="16" maxlength="16" required/><br>
+            
+
+        <a><img src="imagenes/calendario.png"></a>
+        
+        <input id="valid" type="month"> <br>
+
+
+       <a><img src="imagenes/candado.png"></a>
+        
+        <input type="text" id="cvv" ondrop="return false;" onpaste="return false;"
+        onkeypress="return event.charCode>=48 && event.charCode<=57;"
+        minlength="3" maxlength="4" required/><br>
+        
+        <button type="submit" id="guardar" class="boton">Guardar</button>
+
+
+      </form>
+    
 
 
     </main>
