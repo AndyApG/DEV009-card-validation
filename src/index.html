@@ -8,22 +8,24 @@
   <body>
     <header>
       <h1>Guarda tus tarjetas en un solo lugar</h1>
+      <nav>
+        <div class='nav'>
+         <a href="#">Agregar tarjeta</a>
+        </div>
+        <div class='nav'>
+          <a href="#list">Lista de tarjetas</a>
+        </div>
+        
+      </nav>
     </header>
 
-    <main>
 
-      <div class="lista">
-        <legend>Lista de tarjetas</legend>
+    <main id="main" name="main" >
 
-        <ul>
-
-        </ul>
-        
-
-      </div>
+      <legend>Agregar tarjeta</legend>
       
 
-      <div class="tarjeta">
+        <div class="tarjeta">
 
         
         <output type='text' class="tipo" id="tipo1">xxxx</output><br>
@@ -36,8 +38,6 @@
         <output class="mes" id="mes">xxxx xx</output>
         
         <output class='cvv' id="cvv1">xxxx</output>
-        
-
 
       </div>
 
@@ -58,7 +58,7 @@
       
         <input id="number" type="text" ondrop="return false;" onpaste="return false;"
         onkeypress="return event.charCode>=48 && event.charCode<=57;"
-        minlength="16" maxlength="16" required/><br>
+        minlength="16" maxlength="16"/><br>
             
 
         <a><img src="imagenes/calendario.png"></a>
@@ -70,16 +70,31 @@
         
         <input type="text" id="cvv" ondrop="return false;" onpaste="return false;"
         onkeypress="return event.charCode>=48 && event.charCode<=57;"
-        minlength="3" maxlength="4" required/><br>
+        minlength="3" maxlength="4"/><br>
         
         <button id="validar" class="boton">Validar</button>
 
 
       </form>
     
+      <section class="lista" id="list" name="list">
+        
 
+       
+
+        <legend>Lista de tarjetas</legend>
+  
+        <ul>
+  
+        </ul>
+        
+  
+      </section>
 
     </main>
+
+    
+
     <footer>Elaborado por: Andrea Aparicio Guerrero</footer>
     <script src="index.js" type="module"></script>
   </body>
