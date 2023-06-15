@@ -22,10 +22,11 @@ tipoSelected2.addEventListener('click',()=>{
 
 let numberWriting= document.querySelector('#number');
 let numberWrited=document.getElementById('number1');
+let numberWritingValue;
 
 numberWriting.addEventListener('keyup',()=>{
-    
-    numberWrited.textContent=validator.maskify(numberWriting.value);
+    numberWritingValue = numberWriting.value;
+    numberWrited.textContent=validator.maskify(numberWritingValue);
 });
 
 let cvvWriting= document.querySelector('#cvv');
@@ -43,23 +44,43 @@ validWriting.addEventListener('input',()=>{
     validWrited.textContent=validWriting.value;
 });
 
-document.getElementById('validar').addEventListener('click',(numberWrited) =>{
-    if(numberWrited.value !=='0000000000000000' && numberWriting.value !== ''){
-        const creditCardNumber = document.getElementById("number").value;
-        if(validator.isValid(creditCardNumber)){
+document.getElementById('validar').addEventListener('click',() =>{
+
+    if(numberWritingValue !=='0000000000000000' && numberWritingValue !== ''){
+
+
+        if(validator.isValid(numberWritingValue)){
+            let card = {
+                type : tipoWrited.value,
+                name : nameWrited.value,
+                number : numberWritingValue,
+                cvv : cvvWrited.value,
+                date: validWrited.value,
+                info: function(){
+                    const text = ['tipo de tarjeta: '+ this.type,' titular:'+ this.name,'numero de tarjeta: '+
+                    this.number,' cvv:'+this.cvv,'valida hasta: '+this.date];
+                    return text;
+                }
+            };
+
             if(confirm("El número de tarjeta es valido.\n ¿Deseas Guardarlo?")){
-                let tipo =document.getElementById('tipo1').value;
-                let listOfCards = {
-                    type : tipoWrited.value,
-                    name : nameWrited.value,
-                    number : creditCardNumber,
-                    cvv : cvvWrited.value,
-                    date: validWrited.value,
-                };
-                alert('tipo de tarjeta: '+ listOfCards.type+'\n titular:'+ listOfCards.name+'\n numero de tarjeta: '+
-                listOfCards.number+'\n cvv:'+listOfCards.cvv+'\n valida hasta: '+listOfCards.date);
+
+                let writedList = document.getElementById('writedList');
+                let tarjeta = document.createElement('div');
+                writedList.appendChild(tarjeta);
+                
+                for (const i of card.info()){
+
+                    let msg =document.createElement('p');
+                    msg.textContent = i;
+                    let br =document.createElement('br');
+                    tarjeta.appendChild(br);
+                    tarjeta.appendChild(msg);
+                }
             }
-            
+
         }else alert("Número de tarjeta invalido");
+
     }else alert("No hay datos que guardar");
 });
+

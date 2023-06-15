@@ -31,7 +31,7 @@
         <output type='text' class="tipo" id="tipo1">xxxx</output><br>
         
         <output class="name" id="name1">xxxx xxxx</output><br>
-        <a><img src="imagenes/chip.png" class="chip"></a>
+        <a><img src="./imagenes/chip.png" class="chip"></a>
         
         <output class="number" id="number1">0000000000000000</output><br>
         
@@ -51,48 +51,44 @@
         <input type="radio" name="tipo" id="credito" value="Crédito"><label>Crédito</label>
         <input type="radio" name="tipo" id="debito" value="Débito"><label>Débito</label><br>
 
-        <a><img src="imagenes/persona.png"></a>
+        <a><img src="./imagenes/persona.png"></a>
         <input id="name" type="text"><br>
 
-        <a><img src="imagenes/card.png"></a>
+        <a><img src="./imagenes/card.png"></a>
       
         <input id="number" type="text" ondrop="return false;" onpaste="return false;"
         onkeypress="return event.charCode>=48 && event.charCode<=57;"
         minlength="16" maxlength="16"/><br>
             
 
-        <a><img src="imagenes/calendario.png"></a>
+        <a><img src="./imagenes/calendario.png"></a>
         
         <input id="valid" type="month"> <br>
 
 
-       <a><img src="imagenes/candado.png"></a>
+       <a><img src="./imagenes/candado.png"></a>
         
         <input type="text" id="cvv" ondrop="return false;" onpaste="return false;"
         onkeypress="return event.charCode>=48 && event.charCode<=57;"
         minlength="3" maxlength="4"/><br>
         
-        <button id="validar" class="boton">Validar</button>
+        <button type="button" id="validar" class="boton">Validar</button>
 
 
       </form>
     
       <section class="lista" id="list" name="list">
         
-
-       
-
         <legend>Lista de tarjetas</legend>
-  
-        <ul>
-  
-        </ul>
-        
-  
+
+        <div id="writedList">
+
+
+        </div>
+          
       </section>
 
     </main>
-
     
 
     <footer>Elaborado por: Andrea Aparicio Guerrero</footer>
