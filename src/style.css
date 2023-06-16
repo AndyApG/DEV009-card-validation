@@ -1,5 +1,4 @@
 html {
-    height: 100%;
     width: 100%;
     background-color:azure    
   }
@@ -25,7 +24,7 @@ nav{
 
 main{
     width: 90%;
-    height: 100%;
+    height: 95%;
     text-align: left;
     background-color:lightblue ;
     position: absolute;
@@ -38,11 +37,12 @@ main{
 footer{
     width: 90%;
     text-align: center;
-    background-color:lightblue ;
-    position: absolute;
+    background-color:aliceblue ;
+    position: fixed;
     left: 5%;
-    top: 220%;
+    bottom: 0.01%;
     font-size: x-small;
+    margin-bottom: 1%;
 }
 
 h1{
@@ -60,6 +60,8 @@ img[class="chip"]{
     position:absolute;
     width: 15%;
     height: 30%;
+    margin-left: 5%;
+   
 }
 output{
     color: aliceblue;
@@ -143,12 +145,13 @@ div[class='nav']{
     border-radius: 15px;
     background-color: lightblue;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    text-align: left;
     margin: 0.5%;
 
 }
 
 div[class='tarjeta']{
+    text-align: left;
     position:absolute;
     right: 10%;
     top:25%;
@@ -157,15 +160,19 @@ div[class='tarjeta']{
     background-color: rgb(15, 13, 13);
     border-radius: 15px;
     box-shadow: 0 0 1% rgba(0, 0, 0, 0.03);
+    margin-bottom: 5%;
 }
 
 section[class='lista']{
-    width: 100%;
-    text-align: left;
+    width: 50%;
+    height: 80%;
+    right: 25%;
+    text-align: center;
     background-color:lightblue ;
     position: absolute;
-    top: 123%;
+    top: 125%;
     font-size:medium;
+
 }
   /*Selector para la clase 'boton' del boton*/
 .boton{
@@ -177,11 +184,26 @@ section[class='lista']{
     text-align:center;
     margin-top: 1%;
     margin-bottom: 1%;
-    position:absolute;
-    left: 45%;
-    bottom:5%;
+    position:relative;
    
   }
   a{
     margin-right: 12%;
   }
+  .dataList{
+    background-color: rgb(15, 13, 13);
+    border-radius: 15px;
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.03);
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 1%;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: small;
+    margin-top: 1%;
+    position:absolute;
+    
+  }
+
+  

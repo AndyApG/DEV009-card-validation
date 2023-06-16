@@ -48,7 +48,6 @@ document.getElementById('validar').addEventListener('click',() =>{
 
     if(numberWritingValue !=='0000000000000000' && numberWritingValue !== ''){
 
-
         if(validator.isValid(numberWritingValue)){
             let card = {
                 type : tipoWrited.value,
@@ -57,8 +56,8 @@ document.getElementById('validar').addEventListener('click',() =>{
                 cvv : cvvWrited.value,
                 date: validWrited.value,
                 info: function(){
-                    const text = ['tipo de tarjeta: '+ this.type,' titular:'+ this.name,'numero de tarjeta: '+
-                    this.number,' cvv:'+this.cvv,'valida hasta: '+this.date];
+                    const text = ['Tipo: '+ this.type,' Titular:'+ this.name,'Número: '+
+                    this.number,' cvv:'+this.cvv,'Válida hasta: '+this.date];
                     return text;
                 }
             };
@@ -67,16 +66,25 @@ document.getElementById('validar').addEventListener('click',() =>{
 
                 let writedList = document.getElementById('writedList');
                 let tarjeta = document.createElement('div');
+                tarjeta.setAttribute('class','dataList');
                 writedList.appendChild(tarjeta);
-                
+                                
                 for (const i of card.info()){
 
                     let msg =document.createElement('p');
                     msg.textContent = i;
-                    let br =document.createElement('br');
-                    tarjeta.appendChild(br);
+                   
                     tarjeta.appendChild(msg);
+                    
                 }
+
+                let deleteBtn = document.createElement('button');
+                deleteBtn.textContent='Eliminar'; 
+                tarjeta.appendChild(deleteBtn);
+
+                deleteBtn.onclick = ()=>{tarjeta.parentElement.removeChild(tarjeta)};
+
+                
             }
 
         }else alert("Número de tarjeta invalido");
@@ -84,3 +92,10 @@ document.getElementById('validar').addEventListener('click',() =>{
     }else alert("No hay datos que guardar");
 });
 
+document.getElementById('limpiar').addEventListener('click',() =>{
+   nameWrited.textContent='Titular';
+   tipoWrited.textContent='Tipo';
+   numberWrited='0000000000000000';
+   cvvWrited='cvv';
+   validWrited='Válida hasta';
+});
