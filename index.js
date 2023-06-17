@@ -95,7 +95,7 @@ document.getElementById('validar').addEventListener('click',() =>{
 document.getElementById('limpiar').addEventListener('click',() =>{
    nameWrited.textContent='Titular';
    tipoWrited.textContent='Tipo';
-   numberWrited='0000000000000000';
-   cvvWrited='cvv';
-   validWrited='Válida hasta';
+   numberWrited.textContent='0000000000000000';
+   cvvWrited.textContent='cvv';
+   validWrited.textContent='Válida hasta';
 });
