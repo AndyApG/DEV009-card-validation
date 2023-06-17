@@ -57,7 +57,7 @@ document.getElementById('validar').addEventListener('click',() =>{
                 date: validWrited.value,
                 info: function(){
                     const text = ['Tipo: '+ this.type,' Titular:'+ this.name,'Número: '+
-                    this.number,' cvv:'+this.cvv,'Válida hasta: '+this.date];
+                    this.number,' cvv:'+this.cvv,'válida hasta: '+this.date];
                     return text;
                 }
             };
