@@ -97,5 +97,5 @@ document.getElementById('limpiar').addEventListener('click',() =>{
    tipoWrited.textContent='Tipo';
    numberWrited.textContent='0000000000000000';
    cvvWrited.textContent='cvv';
-   validWrited.textContent='Válida hasta';
+   validWrited.textContent='válida hasta';
 });
